@@ -141,7 +141,8 @@ Use la opción Raster/subset, tome en consideración que este método recorta la
   </tr>
 </table>
 
-
+<img src="Fig4.png">
+<h4 id="Sección2">Fig 4. Ejecución del recorte del área seleccionada.</h4>
 
 
 
