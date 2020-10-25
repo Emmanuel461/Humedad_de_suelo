@@ -103,5 +103,5 @@ SoilGrids
 <p>Las imágenes descargadas se guardan como un archivo comprimido, estas no deben ser descomprimidas, ya que el SNAP interpreta la información en ese formato.
 Use la opción <strong>File/ Open Product</strong> para importar las imágenes SAR del repositorio donde se encuentran los archivos RAR descargados.</p>
 
-<img src="Fig2.jpg">
+<img src="Fig2.png">
 <h4 id="Sección2">Importar imágenes del repositorio.</h4>
