@@ -68,7 +68,7 @@ SoilGrids
 
 <p>SoilGrids es un repositorio con información global consistente, basado en datos, que predice las propiedades y clases de los suelos utilizando co-variables y modelos ajustados globalmente (ISRIC, 2020).</p>
 
-<h2>Conjunto de datos</h2>
+<h4>Conjunto de datos</h4>
 
 <table style="width:100%">
   <tr>
@@ -96,5 +96,12 @@ SoilGrids
   </tr>
 </table>
 
+<p><h2 id="Sección3">3. Procesamiento y análisis</h2></p>
 
+<p><h3>2.1 Importar imágenes del repositorio a SNAP.</h3></p>
 
+<p>Las imágenes descargadas se guardan como un archivo comprimido, estas no deben ser descomprimidas, ya que el SNAP interpreta la información en ese formato.
+Use la opción <strong>File/ Open Product</strong> para importar las imágenes SAR del repositorio donde se encuentran los archivos RAR descargados.</p>
+
+<img src="Fig2.jpg">
+<h4 id="Sección2">Importar imágenes del repositorio.</h4>
