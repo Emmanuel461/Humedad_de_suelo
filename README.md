@@ -5,3 +5,14 @@
 
 <p>Este manual fue elaborado por la Escuela de Geografía de la Universidad de Costa Rica, para el cual colaboraron Emmanuel Jesús Céspedes-Rivera y Cristian Aguilar-Barboza en calidad de asistentes avanzados del proyecto "Transformación digital: Incorporación de tecnología SAR en la gestión de riesgos, agricultura y recursos naturales para Centroamérica", en el marco del proyecto UCREA-IICA.</p>
 <p>Este proyecto está coordinado por el Dr Edgar Espinoza Cisneros y co-cordinado por MSc María José Molina Montero. Para mayor información contactar a maria.molinamontero@ucr.ac.cr .</p>
+
+
+<p>Índice</p> 
+
+<li><a href="#Sección1">1. Prerrequisitos</a></li>
+<li><a href="#Sección2">2. Introducción</a></li>
+<li><a href="#Sección3">3. Procesamiento y análisis</a></li>
+<li><a href="#Sección4">4. Librería Soil Moisture</a></li>
+<li><a href="#Sección5">5. Estimación Humedad de suelo</a></li>
+<li><a href="#Sección6">6. Recomendaciones</a></li>
+<li><a href="#Sección7">7. Bibliografía</a></li>
