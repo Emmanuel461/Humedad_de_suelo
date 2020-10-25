@@ -16,3 +16,11 @@
 <li><a href="#Sección5">5. Estimación Humedad de suelo</a></li>
 <li><a href="#Sección6">6. Recomendaciones</a></li>
 <li><a href="#Sección7">7. Bibliografía</a></li>
+
+
+<p>Para ejecutar esta rutina el usuario debe instalar previamente el software Sentinel Toolbox (SNAP), el cual es un software de procesamiento para el análisis y observación de la tierra, con herramientas enfocadas en extensibilidad de datos, portabilidad, procesamiento en marcos gráficos, entre otras herramientas (ESA, 2020).</p>
+
+<img src="SNAP.jpg" />
+
+<p>La descarga del software SNAP se puede realizar en la siguiente dirección electrónica</p> 
+<p><a href="http://step.esa.int/main/download/snap-download/" target="_blank">http://step.esa.int/main/download/snap-download/</a></p> 
