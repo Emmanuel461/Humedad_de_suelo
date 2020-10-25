@@ -145,5 +145,7 @@ Use la opción Raster/subset, tome en consideración que este método recorta la
 <h4 id="Sección2">Fig 4. Ejecución del recorte del área seleccionada.</h4>
 
 
+<p>En la pestaña Band Subset el usuario puede recortar la banda de polarización a utilizar (Fig 4), en este caso se mantienen seleccionadas las bandas Amplitude_VV -hace referencia a los valores de amplitud obtenidos en la escena- y Intensity_VV -corresponde a los valores de amplitud al cuadrado- (Le Toan, 2007) (NASA - ARSET (Applied Remote Sensing training), 2017) (Fig 5), ya que con esta polarización se identificara la humedad de suelo (Fig 4).Una vez realizado esto dar click en <img src="OK.png">.</p>
 
-
+<img src="Fig5.png">
+<h4 id="Sección2">Fig 5. Selección de la banda de polarización VV.</h4>
