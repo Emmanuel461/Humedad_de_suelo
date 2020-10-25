@@ -68,7 +68,7 @@ SoilGrids
 
 <p>SoilGrids es un repositorio con información global consistente, basado en datos, que predice las propiedades y clases de los suelos utilizando co-variables y modelos ajustados globalmente (ISRIC, 2020).</p>
 
-<h2>BConjunto de datos</h2>
+<h2>Conjunto de datos</h2>
 
 <table style="width:100%">
   <tr>
@@ -96,7 +96,5 @@ SoilGrids
   </tr>
 </table>
 
-</body>
-</html>
 
 
