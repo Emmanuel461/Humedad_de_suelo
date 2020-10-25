@@ -20,7 +20,8 @@
 
 <p>Para ejecutar esta rutina el usuario debe instalar previamente el software Sentinel Toolbox (SNAP), el cual es un software de procesamiento para el análisis y observación de la tierra, con herramientas enfocadas en extensibilidad de datos, portabilidad, procesamiento en marcos gráficos, entre otras herramientas (ESA, 2020).</p>
 
-<img src="SNAP.jpg" />
+<img src="SNAP.png" />
+<h4 id="Sección3">Fig. 1. Sentinel Toolbox (SNAP).</h4>
 
 <p>La descarga del software SNAP se puede realizar en la siguiente dirección electrónica</p> 
 <p><a href="http://step.esa.int/main/download/snap-download/" target="_blank">http://step.esa.int/main/download/snap-download/</a></p> 
