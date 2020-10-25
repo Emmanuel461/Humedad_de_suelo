@@ -9,13 +9,13 @@
 
 <p>Índice</p> 
 
-<li><a href="#Sección1">1. Prerrequisitos</a></li>
+<p><li><a href="#Sección1">1. Prerrequisitos</a></li>
 <li><a href="#Sección2">2. Introducción</a></li>
 <li><a href="#Sección3">3. Procesamiento y análisis</a></li>
 <li><a href="#Sección4">4. Librería Soil Moisture</a></li>
 <li><a href="#Sección5">5. Estimación Humedad de suelo</a></li>
 <li><a href="#Sección6">6. Recomendaciones</a></li>
-<li><a href="#Sección7">7. Bibliografía</a></li>
+<li><a href="#Sección7">7. Bibliografía</a></li></p> 
 
 
 <p>Para ejecutar esta rutina el usuario debe instalar previamente el software Sentinel Toolbox (SNAP), el cual es un software de procesamiento para el análisis y observación de la tierra, con herramientas enfocadas en extensibilidad de datos, portabilidad, procesamiento en marcos gráficos, entre otras herramientas (ESA, 2020).</p>
