@@ -104,4 +104,45 @@ SoilGrids
 Use la opción <strong>File/ Open Product</strong> para importar las imágenes SAR del repositorio donde se encuentran los archivos RAR descargados.</p>
 
 <img src="Fig2.png">
-<h4 id="Sección2">Importar imágenes del repositorio.</h4>
+<h4 id="Sección2">Fig 2. Importar imágenes del repositorio.</h4>
+
+
+<p><h3>2.2 Aplicación de un recorte (opcional) / Aplicación de un subset</p></h3>
+<p>Las imágenes SAR abarcan grandes áreas, por lo que para disminuir los tiempos de procesamiento se aplicó un recorte sobre el área de estudio.
+Use la opción Raster/subset, tome en consideración que este método recorta la vista que se tiene en la interfaz de SNAP (Fig 3).</p>
+
+<img src="Fig3.png">
+<h4 id="Sección2">Fig 3. Recorte del área de estudio.</h4>
+
+<p> En Spatial Subset seleccione Geo Coordinates (Fig 4) y coloque los siguientes valores:</p>
+
+<h2>Datos recorte</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>Bound</th>
+    <th>Value</th> 
+  </tr>
+  <tr>
+    <td>North latitude bound</td>
+    <td>10.334</td>
+  </tr>
+  <tr>
+    <td>West longitude bound</td>
+    <td>-85.573</td>
+  </tr>
+  <tr>
+    <td>South latitude bound</td>
+    <td>10.56</td>
+  </tr>
+  <tr>
+    <td>East longitude bound</td>
+    <td>-85.401</td>
+  </tr>
+</table>
+
+
+
+
+
+
