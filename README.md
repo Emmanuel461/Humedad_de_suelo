@@ -39,3 +39,64 @@
 <p>La detección remota con sensores ópticos requieren de observaciones con productos de buena calidad, libre de nubes o sombras de nubes para minimizar la confusión espectral de los datos (Shen et al., 2019), sin embargo, en zonas tropicales las coberturas nubosas son constantes y abundantes, su aplicación resulta limitada (Flores et al., 2019). Debido a este aspecto, se ha implementado el uso de la imágenes SAR, la cual despeja la limitante de la nubosidad y permite la obtención continua de información (Flores et al., 2019).</p>
 
 <p>En este caso se aplicó una metodología para la detección de humedad de suelo basada en dos imágenes, una en órbita ascendente y otra en órbita descendente, con una diferencia temporal de aproximada de 12 horas. Lo anterior, con el objetivo de evitar cambios abruptos en las condiciones humedad de la superficie. Por otro lado, se utilizó la polarización VV, ya que el algoritmo IEM (Inversión de ángulo múltiple), no permite procesar imágenes con polarizaciones cruzadas. La ejecución de esta rutina requiere utilizar el software Sentinel Toolbox (SNAP), el cual contiene la librería Soil Moisture, elaborada por la Agencia Espacial Europea (ESA por sus siglas en inglés). Se consideró como área de estudio un sector de la cuenca del río Tempisque, en el que prevalecen cultivos como caña y arroz, así como la presencia de pastos.</p>
+
+
+<p><h3>1.1 Objetivos de aprendizaje:</h3></p>
+
+<p><li>Comprender los pre-procesos de calibración de las imágenes SAR.</li>
+<li>Describir los procesos de interacción de la señal SAR con la superficie terrestre.</li>
+<li>Identificar ventajas y desventajas del uso de imágenes SAR en la detección de humedad de suelo, a partir de la librería Soil Moisture.</li>
+<li>Generar un mapa de humedad de suelo para la parte baja de la cuenca del río Tempisque.</li></p>
+
+<p><h3>1.2 Datos a dercargar</h3></p>
+<p>Se deben descargar dos imágenes de tipo GRD de Sentinel-1, estas se pueden obtener de forma gratuita en los siguientes enlaces:</p>
+<p>Para ambos casos (Alaska Satellite Facility Vertex y Copernicus Open Access Hub) debe crear -en caso de no tenerse- una cuenta de acceso, para poder descargar datos de información satelital de los repositorios.</p>
+
+
+<h4>Alaska Satellite Facility Vertex</h4> 
+<p>Buscador de datos:<p><a href="https://search.asf.alaska.edu/#/" target="_blank">https://search.asf.alaska.edu/#/</a></p>
+<p>Registro de cuenta:<p><a href="https://urs.earthdata.nasa.gov/users/new" target="_blank">https://urs.earthdata.nasa.gov/users/new</a></p>
+
+<h4>Copernicus Open Access Hub</h4>  
+<p>Buscador de datos:<p><a href="https://scihub.copernicus.eu/dhus/#/home" target="_blank">https://scihub.copernicus.eu/dhus/#/home</a></p>
+<p>Registro de cuenta:<p> <a href="https://scihub.copernicus.eu/dhus/#/self-registration" target="_blank">https://scihub.copernicus.eu/dhus/#/self-registration</a></p>
+
+
+Por otro lado, se deben descargar los archivos correspondientes a contenido de arcillas y arenas (en los primeros 5 cm del suelo), mediante la base de datos SoilGrids:
+SoilGrids
+<p><a href="https://soilgrids.org/" target="_blank">https://soilgrids.org/</a></p>
+
+<p>SoilGrids es un repositorio con información global consistente, basado en datos, que predice las propiedades y clases de los suelos utilizando co-variables y modelos ajustados globalmente (ISRIC, 2020).</p>
+
+<h2>BConjunto de datos</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>Nombre del producto</th>
+    <th>Fecha</th> 
+    <th>Características</th>
+  </tr>
+  <tr>
+    <td>S1A_IW_GRDH_1SDV_20200130T113040_20200130T113105_031029_03907C_E4A5</td>
+    <td>2020/01/30</td>
+    <td><p>Sentinel-1A</p>
+<p>Polarización VV, VH</p>
+<p>Órbita: Descendente</p>
+<p>Modo: IW</p>
+<p>Tipo: GRDH</p></td>
+  </tr>
+  <tr>
+    <td>S1A_IW_GRDH_1SDV_20200130T235649_20200130T235714_031037_0390C2_5BF4</td>
+    <td>2020/01/30</td>
+    <td><p>Sentinel-1A</p>
+<p>Polarización VV, VH</p>
+<p>Órbita: Descendente</p>
+<p>Modo: IW</p>
+<p>Tipo: GRDH</p></td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+
