@@ -41,14 +41,14 @@
 <p>En este caso se aplicó una metodología para la detección de humedad de suelo basada en dos imágenes, una en órbita ascendente y otra en órbita descendente, con una diferencia temporal de aproximada de 12 horas. Lo anterior, con el objetivo de evitar cambios abruptos en las condiciones humedad de la superficie. Por otro lado, se utilizó la polarización VV, ya que el algoritmo IEM (Inversión de ángulo múltiple), no permite procesar imágenes con polarizaciones cruzadas. La ejecución de esta rutina requiere utilizar el software Sentinel Toolbox (SNAP), el cual contiene la librería Soil Moisture, elaborada por la Agencia Espacial Europea (ESA por sus siglas en inglés). Se consideró como área de estudio un sector de la cuenca del río Tempisque, en el que prevalecen cultivos como caña y arroz, así como la presencia de pastos.</p>
 
 
-<p><h3>1.1 Objetivos de aprendizaje:</h3></p>
+<p><h3>2.1 Objetivos de aprendizaje:</h3></p>
 
 <p><li>Comprender los pre-procesos de calibración de las imágenes SAR.</li>
 <li>Describir los procesos de interacción de la señal SAR con la superficie terrestre.</li>
 <li>Identificar ventajas y desventajas del uso de imágenes SAR en la detección de humedad de suelo, a partir de la librería Soil Moisture.</li>
 <li>Generar un mapa de humedad de suelo para la parte baja de la cuenca del río Tempisque.</li></p>
 
-<p><h3>1.2 Datos a dercargar</h3></p>
+<p><h3>2.2 Datos a dercargar</h3></p>
 <p>Se deben descargar dos imágenes de tipo GRD de Sentinel-1, estas se pueden obtener de forma gratuita en los siguientes enlaces:</p>
 <p>Para ambos casos (Alaska Satellite Facility Vertex y Copernicus Open Access Hub) debe crear -en caso de no tenerse- una cuenta de acceso, para poder descargar datos de información satelital de los repositorios.</p>
 
@@ -98,7 +98,7 @@ SoilGrids
 
 <p><h2 id="Sección3">3. Procesamiento y análisis</h2></p>
 
-<p><h3>2.1 Importar imágenes del repositorio a SNAP.</h3></p>
+<p><h3>3.1 Importar imágenes del repositorio a SNAP.</h3></p>
 
 <p>Las imágenes descargadas se guardan como un archivo comprimido, estas no deben ser descomprimidas, ya que el SNAP interpreta la información en ese formato.
 Use la opción <strong>File/ Open Product</strong> para importar las imágenes SAR del repositorio donde se encuentran los archivos RAR descargados.</p>
@@ -107,7 +107,7 @@ Use la opción <strong>File/ Open Product</strong> para importar las imágenes S
 <h4 id="Sección2">Fig 2. Importar imágenes del repositorio.</h4>
 
 
-<p><h3>2.2 Aplicación de un recorte (opcional) / Aplicación de un subset</p></h3>
+<p><h3>3.2 Aplicación de un recorte (opcional) / Aplicación de un subset</h3></p>
 <p>Las imágenes SAR abarcan grandes áreas, por lo que para disminuir los tiempos de procesamiento se aplicó un recorte sobre el área de estudio.
 Use la opción Raster/subset, tome en consideración que este método recorta la vista que se tiene en la interfaz de SNAP (Fig 3).</p>
 
@@ -142,10 +142,26 @@ Use la opción Raster/subset, tome en consideración que este método recorta la
 </table>
 
 <img src="Fig4.png">
-<h4 id="Sección2">Fig 4. Ejecución del recorte del área seleccionada.</h4>
+<h4 id="Sección3">Fig 4. Ejecución del recorte del área seleccionada.</h4>
 
 
 <p>En la pestaña Band Subset el usuario puede recortar la banda de polarización a utilizar (Fig 4), en este caso se mantienen seleccionadas las bandas Amplitude_VV -hace referencia a los valores de amplitud obtenidos en la escena- y Intensity_VV -corresponde a los valores de amplitud al cuadrado- (Le Toan, 2007) (NASA - ARSET (Applied Remote Sensing training), 2017) (Fig 5), ya que con esta polarización se identificara la humedad de suelo (Fig 4).Una vez realizado esto dar click en <img src="OK.png">.</p>
 
 <img src="Fig5.png">
-<h4 id="Sección2">Fig 5. Selección de la banda de polarización VV.</h4>
+<h4 id="Sección3">Fig 5. Selección de la banda de polarización VV.</h4>
+
+<p>El resultado del recorte corresponde a un archivo temporal, por lo que debe guardarse como una imagen nueva, seleccione el recorte y presione click derecho, use la opción <strong>Save Product As</strong> y elija una ruta de salida (Fig 6 y 7). <strong>Este proceso se debe realizar para ambas imágenes.</strong></p>
+
+<img src="Fig6.png">
+<h4 id="Sección3">Fig 6. Guardado de los recortes de datos.</h4>
+
+<p><h2 id="Sección4">4. Librería Soil Moisture</h2></p>
+
+<p>El Soil Moisture and Ocean Salinity (SMOS-SMOS-Box) es una caja de herramientas desarrollada por la Agencia Espacial Europea (ESA) para la observación y análisis de la tierra de forma gratuita en su plataforma de SNAP (European Space Agency (ESA), 2020).</p>
+<p>En este caso se analizaron dos imágenes en polarización VV, pero con diferente ángulo de incidencia (Ascendente y descendente). Para preprocesar las imágenes se debe utilizar la herramienta Multi-Angle Pre-Processing, para acceder a esta selecione Radar/Soil Moisture/Pre-Processing/Multi-Angle/Hybrid Pre-Processing.</p>
+
+<img src="Fig7.png">
+<h4 id="Sección4">Fig 7. Guardado de los recortes de datos.</h4>
+
+<img src="Fig8.png">
+<h4 id="Sección4">Fig 7. Guardado de los recortes de datos.</h4>
