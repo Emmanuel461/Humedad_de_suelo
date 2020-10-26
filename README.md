@@ -298,7 +298,7 @@ Use la opción Raster/subset, tome en consideración que este método recorta la
 
 <iframe width="420" height="315" src="https://www.youtube.com//embed//hPS5Rj7qg98/"></iframe> 
 
-
+<p> </p>
 <h2 id="Sección7">7. Bibliografía</h2>
 
 <p>Alexakis, D. D., Mexis, F. D. K., Vozinaki, A. E. K., Daliakopoulos, I. N., & Tsanis, I. K. (2017). Soil moisture content estimation based on Sentinel-1 and auxiliary earth observation products. A hydrological approach. Sensors (Switzerland), 17(6), 1-16. <a href="https://doi.org/10.3390/s17061455" target="_blank">https://doi.org/10.3390/s17061455</a></p>
