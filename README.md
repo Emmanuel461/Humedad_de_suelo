@@ -262,7 +262,7 @@ Use la opción Raster/subset, tome en consideración que este método recorta la
 <img src="Fig21.png">
 <h4 id="Sección5">Fig 21. Parámetros de la pestaña SM-Dielectric-Modeling.</h4>
 
-<p>En la pestaña <strong>Land-Cover-Mask</strong>, en <strong>Source Bands</strong> seleccione <strong>CCILandCover-2015</strong>, de igual forma en la opción <strong>Land Cover Band. Por último en <strong>Valid land cover classes</strong>, deje las opciones marcadas por defecto.</p>
+<p>En la pestaña <strong>Land-Cover-Mask</strong>, en <strong>Source Bands</strong> seleccione <strong>CCILandCover-2015</strong>, de igual forma en la opción <strong>Land Cover Band</strong>. Por último en <strong>Valid land cover classes</strong>, deje las opciones marcadas por defecto.</p>
 
 <img src="Fig22.png">
 <h4 id="Sección5">Fig 22. Parámetros de la pestaña Land-Cover-Mask.</h4>
