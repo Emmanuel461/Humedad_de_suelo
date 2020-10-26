@@ -63,7 +63,7 @@
 
 
 Por otro lado, se deben descargar los archivos correspondientes a contenido de arcillas y arenas (en los primeros 5 cm del suelo), mediante la base de datos SoilGrids:
-SoilGrids
+
 <p><a href="https://soilgrids.org/" target="_blank">https://soilgrids.org/</a></p>
 
 <p>SoilGrids es un repositorio con información global consistente, basado en datos, que predice las propiedades y clases de los suelos utilizando co-variables y modelos ajustados globalmente (ISRIC, 2020).</p>
