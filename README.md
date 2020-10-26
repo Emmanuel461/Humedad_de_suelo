@@ -175,7 +175,7 @@ Use la opción Raster/subset, tome en consideración que este método recorta la
 <p>Seleccione la opción <strong>Calibration</strong> y luego indique la polarización VV (Fig 9), repita el proceso en la opción <strong>Calibration (2)</strong>.</p>
 
 <img src="Fig9.png">
-<h4 id="Sección4">Fig 9 Parámetros de corrección radiométrica.</h4>
+<h4 id="Sección4">Fig 9. Parámetros de corrección radiométrica.</h4>
 
 
 <p><h3>4.2 Filtro de moteado / Speckle Filter</h3></p>
@@ -187,7 +187,7 @@ Use la opción Raster/subset, tome en consideración que este método recorta la
 <p>La selección del filtro de Boxcar se basa en que es uno de los filtros que mejor coherencia muestra en los resultados cuando se trabajan en áreas agrícolas (Minkyo et al., 2017).</p>
 
 <img src="Fig10.png">
-<h4 id="Sección4">Fig 9 Parámetros de filtro de moteado.</h4>
+<h4 id="Sección4">Fig 10. Parámetros de filtro de moteado.</h4>
 
 <p><h3>4.3 Corrección de terreno / Terrain correction</h3></p>
 
@@ -196,33 +196,59 @@ Use la opción Raster/subset, tome en consideración que este método recorta la
 <p>Use la opción <strong>Terrain-Correction</strong>, dejar las opciones de parámetros por defecto, note que el MDE es seleccionado de forma automática con una resolución de 3 segundos de arco (Fig 11). repita el proceso en la opción <strong>Terrain-Correction (2)</strong>.</p>
 
 <img src="Fig11.png">
-<h4 id="Sección4">Fig 11 Parámetros de corrección de terreno.</h4>
+<h4 id="Sección4">Fig 11. Parámetros de corrección de terreno.</h4>
 
 <p><h3>4.4 Crear un apilado de las imágenes procesadas / Crear un stack de las imágenes procesadas</h3></p>
 
 <p>Se pretende crear un archivo que compile la información de las imágenes preprocesadas añadidas en las opciones <strong>Read</strong> y <strong>Read (2)</strong>. En la pestaña <strong>Initial Offset Method</strong> seleccione la opción <strong>Product Geolocation</strong>, ya que ambas imágenes han sido debidamente calibradas en órbita, Geométrica y radiométrica en pasos previos (Fig 12).</p>
 
 <img src="Fig12.png">
-<h4 id="Sección4">Fig 12 Parámetros en la creación del apilado.</h4>
+<h4 id="Sección4">Fig 12. Parámetros en la creación del apilado.</h4>
 
 <p><h3>3.5 Ruta de salida</h3></p>
 
 <p>Por último en la opción Name establezca un nombre al archivo de salida y en Directory establezca el repositorio de salida (Fig 13).</p>
 
 <img src="Fig13.png">
-<h4 id="Sección4">Fig 13 Parámetros de ruta de salida.</h4>
+<h4 id="Sección4">Fig 13. Parámetros de ruta de salida.</h4>
 
 <p>Una vez realizado los pasos anteriores dar click en <img src="RUN.png">. La ejecución de este gráfico de procesos generará un archivo cuyas bandas poseen la imagen maestra Sigma0_VV_mst_30Jan2020 y la imagen esclava Sigma0_VV_slv_30Jan2020. De igual forma, un archivo con información referida al ángulo de incidencia de cada imagen (Fig 14).</p>
 
 <img src="Fig14.png">
-<h4 id="Sección4">Resultados de pre-procesamiento.</h4>
+<h4 id="Sección4">Fig 14. Resultados de pre-procesamiento.</h4>
 
 <img src="Fig15.png">
-<h4 id="Sección4">Resultados de pre-procesamiento. La imagen de la izquierda corresponde con <strong>Sigma0_VV_mst_30Jan2020</strong>, la imagen derecha presenta valores referidos al ángulo de incidencia correspondiente a la misma imagen.</h4>
+<h4 id="Sección4">Fig 15. Resultados de pre-procesamiento. La imagen de la izquierda corresponde con <strong>Sigma0_VV_mst_30Jan2020</strong>, la imagen derecha presenta valores referidos al ángulo de incidencia correspondiente a la misma imagen.</h4>
 
 <img src="Fig16.png">
-<h4 id="Sección4">Resultados de pre-procesamiento. La imagen de la izquierda corresponde con <strong>Sigma0_VV_slv_30Jan2020</strong>, la imagen derecha presenta valores referidos al ángulo de incidencia correspondiente a la misma imagen.</h4>
+<h4 id="Sección4">Fig 16. Resultados de pre-procesamiento. La imagen de la izquierda corresponde con <strong>Sigma0_VV_slv_30Jan2020</strong>, la imagen derecha presenta valores referidos al ángulo de incidencia correspondiente a la misma imagen.</h4>
 
 
 <h2 id="Sección5">5. Estimación de humedad de suelo</h2>
+
+<p>Una vez ejecutados los pasos anteriores para ejecutar el cálculo de humedad de suelo se debe acceder a <strong>Radar/Soil Moisture/Soil Moisture Retrieval/Multi-Angle IEM SM Retrieval</strong></p>
+
+<img src="Fig16.png">
+<h4 id="Sección5">Fig 16. Acceso al Multi-Angle IEM SM Retrieval para el cálculo de humedad de suelo.</h4>
+
+<p>Una vez realizado el paso anterior aparecerá el constructor de gráficos de SNAP, el cual ilustra el flujo de procesamiento para el cálculo de humedad de suelo (Fig 17).</p>
+
+<img src="Fig17.png">
+<h4 id="Sección5">Fig. 17. Gráfico de procesamiento mostrado por la caja de herramienta de humedad de suelo de SNAP.</h4>
+
+<p>En Read/Name seleccione multi-angle_pre-processing_stack_SM (Fig 18).</p>
+
+<img src="Fig18.png">
+<h4 id="Sección5">Fig. 18. Selección del apilado creado producto de los pre-procesos sobre las imágenes de entrada.</h4>
+
+<p>Una vez seleccionado el apilado de imágenes pase a la pestaña <strong>IEM-Multi-Angle-Inversion</strong>, y seleccione las polarizaciones VV1-VV2 en el parámetro de <strong>Polarisation</strong> (Fig 18). Los demás parámetros dejarlos por defecto.</p>
+
+<p>Este proceso tiene como objetivo calcular la constante dieléctrica real (RDC por sus siglas en inglés) en base a los parámetros de las imágenes contenidas dentro del apilado generado previamente.</p>
+
+<p>El enfoque multiángulo utiliza un coeficiente de retrodispersión (HH o VV) de cada una de las dos imágenes (Ascendente-Descendente). En el proceso se puede seleccionar una de las cuatro combinaciones de polarización posibles, en este caso VV.</p>
+
+<img src="Fig19.png">
+<h4 id="Sección5">Fig. 19. Selección de parámetros en IEM-Multi-Angle-Inversion.</h4>
+
+</p>Continuando con el proceso seleccione la pestaña de <strong>AddLandCover</strong>, en este caso seleccione <strong>External Files</strong><img src="....png">, importe los datos de arenas y arcillas descargados de la plataforma SoilGrids, sumado a esto seleccione la opción <strong>CCILandCover-2015</strong> el cual es un mosaico con datos de cobertura perteneciente a la ESA (Fig 20).</p>
 
