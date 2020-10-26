@@ -150,7 +150,7 @@ Use la opción Raster/subset, tome en consideración que este método recorta la
 <img src="Fig5.png">
 <h4 id="Sección3">Fig 5. Selección de la banda de polarización VV.</h4>
 
-<p>El resultado del recorte corresponde a un archivo temporal, por lo que debe guardarse como una imagen nueva, seleccione el recorte y presione click derecho, use la opción <strong>Save Product As</strong> y elija una ruta de salida (Fig 6 y 7). <strong>Este proceso se debe realizar para ambas imágenes.</strong></p>
+<p>El resultado del recorte corresponde a un archivo temporal, por lo que debe guardarse como una imagen nueva, seleccione el recorte y presione click derecho, use la opción <strong>Save Product As</strong> y elija una ruta de salida (Fig 6). <strong>Este proceso se debe realizar para ambas imágenes.</strong></p>
 
 <img src="Fig6.png">
 <h4 id="Sección3">Fig 6. Guardado de los recortes de datos.</h4>
@@ -161,7 +161,32 @@ Use la opción Raster/subset, tome en consideración que este método recorta la
 <p>En este caso se analizaron dos imágenes en polarización VV, pero con diferente ángulo de incidencia (Ascendente y descendente). Para preprocesar las imágenes se debe utilizar la herramienta Multi-Angle Pre-Processing, para acceder a esta selecione Radar/Soil Moisture/Pre-Processing/Multi-Angle/Hybrid Pre-Processing.</p>
 
 <img src="Fig7.png">
-<h4 id="Sección4">Fig 7. Guardado de los recortes de datos.</h4>
+<h4 id="Sección4">Fig 7. Soil Moisture.</h4>
 
 <img src="Fig8.png">
-<h4 id="Sección4">Fig 7. Guardado de los recortes de datos.</h4>
+<h4 id="Sección4">Fig 8. Preprocesamiento para imágenes de ángulo múltiple.</h4>
+
+<p>En las opciones <strong>Read (1)</strong> y <strong>Read (2)</strong>, seleccione cada uno de los recorte en Source Parameters.</p>
+
+<p><h3>4.1 Corrección Radiométrica/Radiometric correction</h3></p>
+
+<p>Una vez hecho esto, se procede a calibrar radiometricamente la imagen, esto permite asociar el valor de los píxeles de la escena directamente con el reflejo de las microondas de la superficie de la imagen (Environmental Systems Research Institute (ESRI), 2019). Este proceso es indispensable para la ejecución de análisis cuantitativos a partir de imágenes SAR (EO4SD (Earth Observation for Sustainable Development), n.d).</p>
+
+<p>Seleccione la opción <strong>Calibration</strong> y luego indique la polarización VV (Fig 9), repita el proceso en la opción <strong>Calibration (2)</strong>.</p>
+
+<img src="Fig9.png">
+<h4 id="Sección4">Fig 9 Parámetros de corrección radiométrica.</h4>
+
+
+<p><h3>4.2 Filtro de moteado / Speckle Filter</h3></p>
+
+<p>El moteado es una distorsión en las imágenes SAR, que se manifiesta como una estructura granular, conocido como efecto “sal y pimienta”, esta distorsión es inherente en imágenes SAR y es el resultado de la interferencia de los ecos de la retrodispersión (EO4SD (Earth Observation for Sustainable Development), n.d y Flores et al., 2019).</p>
+
+<p>Use la opción <strong>Speckle Filter</strong>. Seleccionar el filtro deseado, en este caso se utilizó <strong>Boxcar</strong> con una ventana de 5x5 (Fig 9) repita el proceso en la opción <strong>Speckle Filter (2).</strong></p>
+  
+<p>La selección del filtro de Boxcar se basa en que es uno de los filtros que mejor coherencia muestra en los resultados cuando se trabajan en áreas agrícolas (Minkyo et al., 2017).</p>
+
+<img src="Fig10.png">
+<h4 id="Sección4">Fig 9 Parámetros de filtro de moteado.</h4>
+
+
