@@ -205,7 +205,7 @@ Use la opción Raster/subset, tome en consideración que este método recorta la
 <img src="Fig12.png">
 <h4 id="Sección4">Fig 12. Parámetros en la creación del apilado.</h4>
 
-<p><h3>3.5 Ruta de salida</h3></p>
+<p><h3>4.5 Ruta de salida</h3></p>
 
 <p>Por último en la opción Name establezca un nombre al archivo de salida y en Directory establezca el repositorio de salida (Fig 13).</p>
 
