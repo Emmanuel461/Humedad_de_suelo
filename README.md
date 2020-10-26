@@ -189,4 +189,40 @@ Use la opción Raster/subset, tome en consideración que este método recorta la
 <img src="Fig10.png">
 <h4 id="Sección4">Fig 9 Parámetros de filtro de moteado.</h4>
 
+<p><h3>4.3 Corrección de terreno / Terrain correction</h3></p>
+
+<p>El objetivo de este proceso es corregir las distorsiones del terreno que se presenten en la escena de la imagen (Flores et al., 2019). El proceso tiene como requisito el uso de un Modelo Digital de Terreno (MDE), se puede utilizar los repositorios de MDE que SNAP proporciona para realizar el proceso.</p>
+
+<p>Use la opción <strong>Terrain-Correction</strong>, dejar las opciones de parámetros por defecto, note que el MDE es seleccionado de forma automática con una resolución de 3 segundos de arco (Fig 11). repita el proceso en la opción <strong>Terrain-Correction (2)</strong>.</p>
+
+<img src="Fig11.png">
+<h4 id="Sección4">Fig 11 Parámetros de corrección de terreno.</h4>
+
+<p><h3>4.4 Crear un apilado de las imágenes procesadas / Crear un stack de las imágenes procesadas</h3></p>
+
+<p>Se pretende crear un archivo que compile la información de las imágenes preprocesadas añadidas en las opciones <strong>Read</strong> y <strong>Read (2)</strong>. En la pestaña <strong>Initial Offset Method</strong> seleccione la opción <strong>Product Geolocation</strong>, ya que ambas imágenes han sido debidamente calibradas en órbita, Geométrica y radiométrica en pasos previos (Fig 12).</p>
+
+<img src="Fig12.png">
+<h4 id="Sección4">Fig 12 Parámetros en la creación del apilado.</h4>
+
+<p><h3>3.5 Ruta de salida</h3></p>
+
+<p>Por último en la opción Name establezca un nombre al archivo de salida y en Directory establezca el repositorio de salida (Fig 13).</p>
+
+<img src="Fig13.png">
+<h4 id="Sección4">Fig 13 Parámetros de ruta de salida.</h4>
+
+<p>Una vez realizado los pasos anteriores dar click en <img src="RUN.png">. La ejecución de este gráfico de procesos generará un archivo cuyas bandas poseen la imagen maestra Sigma0_VV_mst_30Jan2020 y la imagen esclava Sigma0_VV_slv_30Jan2020. De igual forma, un archivo con información referida al ángulo de incidencia de cada imagen (Fig 14).</p>
+
+<img src="Fig14.png">
+<h4 id="Sección4">Resultados de pre-procesamiento.</h4>
+
+<img src="Fig15.png">
+<h4 id="Sección4">Resultados de pre-procesamiento. La imagen de la izquierda corresponde con <strong>Sigma0_VV_mst_30Jan2020</strong>, la imagen derecha presenta valores referidos al ángulo de incidencia correspondiente a la misma imagen.</h4>
+
+<img src="Fig16.png">
+<h4 id="Sección4">Resultados de pre-procesamiento. La imagen de la izquierda corresponde con <strong>Sigma0_VV_slv_30Jan2020</strong>, la imagen derecha presenta valores referidos al ángulo de incidencia correspondiente a la misma imagen.</h4>
+
+
+<h2 id="Sección5">5. Estimación de humedad de suelo</h2>
 
