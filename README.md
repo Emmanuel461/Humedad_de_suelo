@@ -234,12 +234,12 @@ Use la opción Raster/subset, tome en consideración que este método recorta la
 <p>Una vez realizado el paso anterior aparecerá el constructor de gráficos de SNAP, el cual ilustra el flujo de procesamiento para el cálculo de humedad de suelo (Fig 17).</p>
 
 <img src="Fig17.png">
-<h4 id="Sección5">Fig. 17. Gráfico de procesamiento mostrado por la caja de herramienta de humedad de suelo de SNAP.</h4>
+<h4 id="Sección5">Fig 17. Gráfico de procesamiento mostrado por la caja de herramienta de humedad de suelo de SNAP.</h4>
 
 <p>En Read/Name seleccione multi-angle_pre-processing_stack_SM (Fig 18).</p>
 
 <img src="Fig18.png">
-<h4 id="Sección5">Fig. 18. Selección del apilado creado producto de los pre-procesos sobre las imágenes de entrada.</h4>
+<h4 id="Sección5">Fig 18. Selección del apilado creado producto de los pre-procesos sobre las imágenes de entrada.</h4>
 
 <p>Una vez seleccionado el apilado de imágenes pase a la pestaña <strong>IEM-Multi-Angle-Inversion</strong>, y seleccione las polarizaciones VV1-VV2 en el parámetro de <strong>Polarisation</strong> (Fig 18). Los demás parámetros dejarlos por defecto.</p>
 
@@ -248,7 +248,72 @@ Use la opción Raster/subset, tome en consideración que este método recorta la
 <p>El enfoque multiángulo utiliza un coeficiente de retrodispersión (HH o VV) de cada una de las dos imágenes (Ascendente-Descendente). En el proceso se puede seleccionar una de las cuatro combinaciones de polarización posibles, en este caso VV.</p>
 
 <img src="Fig19.png">
-<h4 id="Sección5">Fig. 19. Selección de parámetros en IEM-Multi-Angle-Inversion.</h4>
+<h4 id="Sección5">Fig 19. Selección de parámetros en IEM-Multi-Angle-Inversion.</h4>
 
-</p>Continuando con el proceso seleccione la pestaña de <strong>AddLandCover</strong>, en este caso seleccione <strong>External Files</strong><img src="....png">, importe los datos de arenas y arcillas descargados de la plataforma SoilGrids, sumado a esto seleccione la opción <strong>CCILandCover-2015</strong> el cual es un mosaico con datos de cobertura perteneciente a la ESA (Fig 20).</p>
+<p>Continuando con el proceso seleccione la pestaña de <strong>AddLandCover</strong>, en este caso seleccione <strong>External Files</strong><img src="3.png">, importe los datos de arenas y arcillas descargados de la plataforma SoilGrids, sumado a esto seleccione la opción <strong>CCILandCover-2015</strong> el cual es un mosaico con datos de cobertura perteneciente a la ESA (Fig 20).</p>
 
+<img src="Fig20.png">
+<h4 id="Sección5">Fig 20. Selección de los parámetros en la pestaña <strong>AddLandCover</strong> y añadido de los datos de Arenas(Sand) y Arcillas (Clay) al proceso.</h4>
+
+<p>Una vez calculada la RDC, se procede a utilizar un modelo para invertir la RDC para estimar la humedad de suelo, en este caso el propuesto por Hallikainen -Dielectric Model-, el cual calcula la humedad de suelo a partir de las variables arenas y arcillas en conjunto con los datos de cobertura del CCILandCover-2015 (Fig 21).</p>
+
+<p>En los parámetros de <strong>Min SM</strong> y <strong>Max SM</strong> dejar los valores por defecto.</p>
+
+<img src="Fig21.png">
+<h4 id="Sección5">Fig 21. Parámetros de la pestaña SM-Dielectric-Modeling.</h4>
+
+<p>En la pestaña <strong>Land-Cover-Mask</strong>, en <strong>Source Bands</strong> seleccione <strong>CCILandCover-2015</strong>, de igual forma en la opción <strong>Land Cover Band. Por último en <strong>Valid land cover classes</strong>, deje las opciones marcadas por defecto.</p>
+
+<img src="Fig22.png">
+<h4 id="Sección5">Fig 22. Parámetros de la pestaña Land-Cover-Mask.</h4>
+
+<p>Posteriormente en la pestaña <strong>Write</strong>, en <strong>Name</strong> establezca el nombre deseado de salida y en Directory la ruta de guardado del archivo a generar (Fig 23). Y presione<img src="RUN.png">.<p>
+
+<img src="Fig23.png">
+<h4 id="Sección5">Fig 23. Asignación de nombre y directorio de salida del proceso.</h4>
+
+<p>Una vez ejecutado, el nuevo archivo generado posee una serie de bandas (Fig 24), entre las que se encuentra el cálculo de humedad de suelo <strong>(sm)</strong> y el modelo de constante dieléctrica <strong>(RDC)</strong>.</p>
+
+<img src="Fig24.png">
+<h4 id="Sección5">Fig 24. Capas raster sm y RDC con el resultado del proceso de cálculo de humedad de suelo.</h4>
+
+<img src="Fig25.png">
+<h4 id="Sección5">Fig 25. Capas raster sm resultado del cálculo de humedad de suelo.</h4>
+
+<img src="Fig26.png">
+<h4 id="Sección5">Fig 26. Visualización en QGIS del cálculo de humedad de suelo.</h4>
+
+<h2 id="Sección6">6. Recomendaciones</h2>
+
+<p>Para ejecutar este flujo de trabajo debe cerciorarse que en el momento de adquisición de las imágenes no haya presencia de precipitación, ya que el agua en la atmósfera provoca que la señal se disperse, impactando los valores de constante dieléctrica estimados. De igual forma, se debe trabajar con imágenes con la menor distancia temporal posible, en este caso se utilizaron imágenes con una distancia temporal aproximada de 12 horas.</p>
+
+<p>Dado que el coeficiente de retrodispersión se encuentra correlacionado con la humedad de suelo, sectores de alta retrodispersión como el caso de zonas urbanas o de topografía que mire en dirección al sensor suelen detectarse con valores altos de humedad de suelo, por lo tanto se recomienda la aplicación de filtros para descartar estos resultados.</p>
+
+<p>Se recomienda comparar los resultados obtenidos en el flujo de trabajo con datos de humedad de suelo obtenidos en campo para evidenciar la precisión del método y también realizar una calibración de los datos -cálculo de la constante dieléctrica real (RDC)-.</p>
+
+
+<h2 id="Sección7">7. Bibliografía</h2>
+
+<p>Alexakis, D. D., Mexis, F. D. K., Vozinaki, A. E. K., Daliakopoulos, I. N., & Tsanis, I. K. (2017). Soil moisture content estimation based on Sentinel-1 and auxiliary earth observation products. A hydrological approach. Sensors (Switzerland), 17(6), 1-16. <a href="https://doi.org/10.3390/s17061455" target="_blank">https://doi.org/10.3390/s17061455</a></p>
+
+<p>Clement, M. A., Kilsby, C. G., & Moore, P. (2017). Multi-temporal synthetic aperture radar flood mapping using change detection. Journal of Flood Risk Management, 11(2), 152-168.<a href="https://doi.org/10.1111/jfr3.12303" target="_blank">https://doi.org/10.1111/jfr3.12303</a></p> 
+
+<p>European Space Agency (ESA). (2020). SMOS Toolbox | STEP.<a href="https://step.esa.int/main/toolboxes/smos-toolbox/" target="_blank">https://step.esa.int/main/toolboxes/smos-toolbox/</a></p>
+
+<p>Environmental Systems Research Institute (ESRI). (2019). Calibración radiométrica de Sentinel-1—Ayuda | ArcGIS Desktop. ArcGIS Desktop.<a href="https://desktop.arcgis.com/es/arcmap/latest/manage-data/raster-and-images/sentinel-1-radiometric-calibration.htm" target="_blank">https://desktop.arcgis.com/es/arcmap/latest/manage-data/raster-and-images/sentinel-1-radiometric-calibration.htm</a></p>
+
+<p>Flores-Anderson, A. I., Herndon, K. E., Bahadur Thapa, R., & Cherrington, E. (Eds.). (2019). The Synthetic Aperture Radar (SAR) Handbook: Comprehensive Methodologies for Forest Monitoring and Biomass Estimation. <a href="https://doi.org/10.25966/nr2c-s697" target="_blank">https://doi.org/10.25966/nr2c-s697</a></p>
+
+<p>ISRIC. (2020). Soil Grids.<a href="https://soilgrids.org/" target="_blank">https://soilgrids.org/</a></p>
+
+<p>Le Toan, T. (2007). Introduction to SAR Remote Sensing Lecture.<a href="https://earth.esa.int/landtraining07/D1LA1-LeToan.pdf" target="_blank">https://earth.esa.int/landtraining07/D1LA1-LeToan.pdf</a></p>
+
+<p>Minkyo, Y., Yun, H., Kim, H., Lee, W., & Kim, K. (2017). A Study on Optimal D-InSAR Filtering Technique According to Landform Relief. Proceedings, 1(8), 723.<a href="https://doi.org/10.3390/proceedings1080723" target="_blank">https://doi.org/10.3390/proceedings1080723</a></p>
+
+<p>NASA - ARSET (Applied Remote Sensing training). (2017). NASA Remote Sensing for Flood Monitoring and Management Accessing SAR Data Objectives.<a href="https://arset.gsfc.nasa.gov/sites/default/files/disasters/Dewberry/S2E4.pdf" target="_blank">https://arset.gsfc.nasa.gov/sites/default/files/disasters/Dewberry/S2E4.pdf</a></p>
+
+<p>Shen, W., Li, M., Huang, C., Tao, X., Li, S., & Wei, A. (2019). Mapping annual forest change due to afforestation in Guangdong Province of China using active and passive remote sensing data. Remote Sensing, 11(5), 1-21. <a href="https://doi.org/10.3390/rs11050490" target="_blank">https://doi.org/10.3390/rs11050490</a></p>
+
+<p>Tsyganskaya, V., Martinis, S., Marzahn, P., & Ludwig, R. (2018a). Detection of temporary flooded vegetation using Sentinel-1 time series data. Remote Sensing, 10(8).<a href="https://doi.org/10.3390/rs10081286" target="_blank">https://doi.org/10.3390/rs10081286</a></p>
+
+<p>Tsyganskaya, V., Martinis, S., Marzahn, P., & Ludwig, R. (2018b). SAR-based detection of flooded vegetation–a review of characteristics and approaches. En International Journal of Remote Sensing (Vol. 39, Número 8, pp. 2255-2293). Taylor and Francis Ltd. <a href="https://doi.org/10.1080/01431161.2017.1420938" target="_blank">https://doi.org/10.1080/01431161.2017.1420938</a></p>
