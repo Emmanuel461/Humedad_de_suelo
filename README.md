@@ -288,12 +288,6 @@ Use la opción Raster/subset, tome en consideración que este método recorta la
 
 <p>Se recomienda comparar los resultados obtenidos en el flujo de trabajo con datos de humedad de suelo obtenidos en campo para evidenciar la precisión del método y también realizar una calibración de los datos -cálculo de la constante dieléctrica real (RDC)-.</p>
 
-<p>Para más detalles puede ver el siguiente video tutorial, donde se ilustran los pasos para ejecutar lo mostrado en este manual:</p>
-
-
-
-
-<iframe width="420" height="315" src="https://www.youtube.com//embed//WPz0LOWD9oM/"></iframe> 
 
 <p> </p>
 <h2 id="Sección7">7. Bibliografía</h2>
