@@ -1,3 +1,7 @@
+
+<h1>Introducción al uso de imágenes de Radar de Apertura Sintética aplicado a la agricultura</h1> 
+<h2>Manual básico de introducción a SNAP</h2> 
+
 <p>Este manual fue elaborado con el proposito de proporcionar una introducción a al uso del SNAP y a la interpretación de imágenes SAR<p>
 
 <p>Índice</p> 
