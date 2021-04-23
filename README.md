@@ -74,8 +74,8 @@ Por otro lado, se deben descargar los archivos correspondientes a contenido de a
     <th>Características</th>
   </tr>
   <tr>
-    <td>S1A_IW_GRDH_1SDV_20200130T113040_20200130T113105_031029_03907C_E4A5</td>
-    <td>2020/01/30</td>
+    <td>S1A_IW_GRDH_1SDV_20210212T112310_20210212T112335_036556_044B21_4B85</td>
+    <td>2021/02/12</td>
     <td><p>Sentinel-1A</p>
 <p>Polarización VV, VH</p>
 <p>Órbita: Descendente</p>
@@ -83,8 +83,8 @@ Por otro lado, se deben descargar los archivos correspondientes a contenido de a
 <p>Tipo: GRDH</p></td>
   </tr>
   <tr>
-    <td>S1A_IW_GRDH_1SDV_20200130T235649_20200130T235714_031037_0390C2_5BF4</td>
-    <td>2020/01/30</td>
+    <td>S1A_IW_GRDH_1SDV_20210212T234823_20210212T234848_036564_044B68_FA9A</td>
+    <td>2021/02/12</td>
     <td><p>Sentinel-1A</p>
 <p>Polarización VV, VH</p>
 <p>Órbita: Descendente</p>
@@ -122,19 +122,19 @@ Use la opción Raster/subset, tome en consideración que este método recorta la
   </tr>
   <tr>
     <td>North latitude bound</td>
-    <td>10.334</td>
+    <td>9.325</td>
   </tr>
   <tr>
     <td>West longitude bound</td>
-    <td>-85.573</td>
+    <td>-83.575</td>
   </tr>
   <tr>
     <td>South latitude bound</td>
-    <td>10.56</td>
+    <td>9.272</td>
   </tr>
   <tr>
     <td>East longitude bound</td>
-    <td>-85.401</td>
+    <td>-83.635</td>
   </tr>
 </table>
 
@@ -225,60 +225,60 @@ Use la opción Raster/subset, tome en consideración que este método recorta la
 
 <p>Una vez ejecutados los pasos anteriores para ejecutar el cálculo de humedad de suelo se debe acceder a <strong>Radar/Soil Moisture/Soil Moisture Retrieval/Multi-Angle IEM SM Retrieval</strong></p>
 
-<img src="Fig16.png">
-<h4 id="Sección5">Fig 16. Acceso al Multi-Angle IEM SM Retrieval para el cálculo de humedad de suelo.</h4>
+<img src="Fig17.png">
+<h4 id="Sección5">Fig 17. Acceso al Multi-Angle IEM SM Retrieval para el cálculo de humedad de suelo.</h4>
 
 <p>Una vez realizado el paso anterior aparecerá el constructor de gráficos de SNAP, el cual ilustra el flujo de procesamiento para el cálculo de humedad de suelo (Fig 17).</p>
 
-<img src="Fig17.png">
-<h4 id="Sección5">Fig 17. Gráfico de procesamiento mostrado por la caja de herramienta de humedad de suelo de SNAP.</h4>
+<img src="Fig18.png">
+<h4 id="Sección5">Fig 18. Gráfico de procesamiento mostrado por la caja de herramienta de humedad de suelo de SNAP.</h4>
 
 <p>En Read/Name seleccione multi-angle_pre-processing_stack_SM (Fig 18).</p>
 
-<img src="Fig18.png">
-<h4 id="Sección5">Fig 18. Selección del apilado creado producto de los pre-procesos sobre las imágenes de entrada.</h4>
+<img src="Fig19.png">
+<h4 id="Sección5">Fig 19. Selección del apilado creado producto de los pre-procesos sobre las imágenes de entrada.</h4>
 
-<p>Una vez seleccionado el apilado de imágenes pase a la pestaña <strong>IEM-Multi-Angle-Inversion</strong>, y seleccione las polarizaciones VV1-VV2 en el parámetro de <strong>Polarisation</strong> (Fig 18). Los demás parámetros dejarlos por defecto.</p>
+<p>Una vez seleccionado el apilado de imágenes pase a la pestaña <strong>IEM-Multi-Angle-Inversion</strong>, y seleccione las polarizaciones VV1-VV2 en el parámetro de <strong>Polarisation</strong> (Fig 19). Los demás parámetros dejarlos por defecto.</p>
 
 <p>Este proceso tiene como objetivo calcular la constante dieléctrica real (RDC por sus siglas en inglés) en base a los parámetros de las imágenes contenidas dentro del apilado generado previamente.</p>
 
 <p>El enfoque multiángulo utiliza un coeficiente de retrodispersión (HH o VV) de cada una de las dos imágenes (Ascendente-Descendente). En el proceso se puede seleccionar una de las cuatro combinaciones de polarización posibles, en este caso VV.</p>
 
-<img src="Fig19.png">
-<h4 id="Sección5">Fig 19. Selección de parámetros en IEM-Multi-Angle-Inversion.</h4>
-
-<p>Continuando con el proceso seleccione la pestaña de <strong>AddLandCover</strong>, en este caso seleccione <strong>External Files</strong><img src="3.png">, importe los datos de arenas y arcillas descargados de la plataforma SoilGrids, sumado a esto seleccione la opción <strong>CCILandCover-2015</strong> el cual es un mosaico con datos de cobertura perteneciente a la ESA (Fig 20).</p>
-
 <img src="Fig20.png">
-<h4 id="Sección5">Fig 20. Selección de los parámetros en la pestaña <strong>AddLandCover</strong> y añadido de los datos de Arenas(Sand) y Arcillas (Clay) al proceso.</h4>
+<h4 id="Sección5">Fig 20. Selección de parámetros en IEM-Multi-Angle-Inversion.</h4>
 
-<p>Una vez calculada la RDC, se procede a utilizar un modelo para invertir la RDC para estimar la humedad de suelo, en este caso el propuesto por Hallikainen -Dielectric Model-, el cual calcula la humedad de suelo a partir de las variables arenas y arcillas en conjunto con los datos de cobertura del CCILandCover-2015 (Fig 21).</p>
+<p>Continuando con el proceso seleccione la pestaña de <strong>AddLandCover</strong>, en este caso seleccione <strong>External Files</strong><img src="3.png">, importe los datos de arenas y arcillas descargados de la plataforma SoilGrids, sumado a esto seleccione la opción <strong>CCILandCover-2015</strong> el cual es un mosaico con datos de cobertura perteneciente a la ESA (Fig 21).</p>
+
+<img src="Fig21.png">
+<h4 id="Sección5">Fig 21. Selección de los parámetros en la pestaña <strong>AddLandCover</strong> y añadido de los datos de Arenas(Sand) y Arcillas (Clay) al proceso.</h4>
+
+<p>Una vez calculada la RDC, se procede a utilizar un modelo para invertir la RDC para estimar la humedad de suelo, en este caso el propuesto por Hallikainen -Dielectric Model-, el cual calcula la humedad de suelo a partir de las variables arenas y arcillas en conjunto con los datos de cobertura del CCILandCover-2015 (Fig 22).</p>
 
 <p>En los parámetros de <strong>Min SM</strong> y <strong>Max SM</strong> dejar los valores por defecto.</p>
 
-<img src="Fig21.png">
-<h4 id="Sección5">Fig 21. Parámetros de la pestaña SM-Dielectric-Modeling.</h4>
+<img src="Fig22.png">
+<h4 id="Sección5">Fig 22. Parámetros de la pestaña SM-Dielectric-Modeling.</h4>
 
 <p>En la pestaña <strong>Land-Cover-Mask</strong>, en <strong>Source Bands</strong> seleccione <strong>CCILandCover-2015</strong>, de igual forma en la opción <strong>Land Cover Band</strong>. Por último en <strong>Valid land cover classes</strong>, deje las opciones marcadas por defecto.</p>
 
-<img src="Fig22.png">
-<h4 id="Sección5">Fig 22. Parámetros de la pestaña Land-Cover-Mask.</h4>
+<img src="Fig23.png">
+<h4 id="Sección5">Fig 23. Parámetros de la pestaña Land-Cover-Mask.</h4>
 
 <p>Posteriormente en la pestaña <strong>Write</strong>, en <strong>Name</strong> establezca el nombre deseado de salida y en Directory la ruta de guardado del archivo a generar (Fig 23). Y presione<img src="RUN.png">.<p>
 
-<img src="Fig23.png">
-<h4 id="Sección5">Fig 23. Asignación de nombre y directorio de salida del proceso.</h4>
+<img src="Fig24.png">
+<h4 id="Sección5">Fig 24. Asignación de nombre y directorio de salida del proceso.</h4>
 
 <p>Una vez ejecutado, el nuevo archivo generado posee una serie de bandas (Fig 24), entre las que se encuentra el cálculo de humedad de suelo <strong>(sm)</strong> y el modelo de constante dieléctrica <strong>(RDC)</strong>.</p>
 
-<img src="Fig24.png">
-<h4 id="Sección5">Fig 24. Capas raster sm y RDC con el resultado del proceso de cálculo de humedad de suelo.</h4>
-
 <img src="Fig25.png">
-<h4 id="Sección5">Fig 25. Capas raster sm resultado del cálculo de humedad de suelo.</h4>
+<h4 id="Sección5">Fig 25. Capas raster sm y RDC con el resultado del proceso de cálculo de humedad de suelo.</h4>
 
 <img src="Fig26.png">
-<h4 id="Sección5">Fig 26. Visualización en QGIS del cálculo de humedad de suelo.</h4>
+<h4 id="Sección5">Fig 26. Capas raster sm resultado del cálculo de humedad de suelo.</h4>
+
+<img src="Fig27.png">
+<h4 id="Sección5">Fig 27. Visualización en QGIS del cálculo de humedad de suelo.</h4>
 
 <h2 id="Sección6">6. Recomendaciones</h2>
 
