@@ -3,7 +3,7 @@
 <h2>Manual básico de introducción a SNAP</h2>
 
 <h3>Elaborado por:</h3>
-<h3>Emmnauel Jesús Céspedes Rivera</h3>
+<h3>Emmanuel Jesús Céspedes Rivera</h3>
 <h3>Cristian Aguilar Barboza</h3>
 
 
