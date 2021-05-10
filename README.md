@@ -49,7 +49,7 @@
 <p><li>Comprender los pre-procesos de calibración de las imágenes SAR.</li>
 <li>Describir los procesos de interacción de la señal SAR con la superficie terrestre.</li>
 <li>Identificar ventajas y desventajas del uso de imágenes SAR en la detección de humedad de suelo, a partir de la librería Soil Moisture.</li>
-<li>Generar un mapa de humedad de suelo para la parte baja de la cuenca del río Tempisque.</li></p>
+<li>Generar un mapa de humedad de suelo para un sector de la zona sur de Costa Rica.</li></p>
 
 <p><h3>2.2 Datos a dercargar</h3></p>
 <p>Se deben descargar dos imágenes de tipo GRD de Sentinel-1, estas se pueden obtener de forma gratuita en los siguientes enlaces:</p>
