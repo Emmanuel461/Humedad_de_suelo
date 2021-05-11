@@ -51,7 +51,7 @@
 <li>Identificar ventajas y desventajas del uso de imágenes SAR en la detección de humedad de suelo, a partir de la librería Soil Moisture.</li>
 <li>Generar un mapa de humedad de suelo para un sector de la zona sur de Costa Rica. </li></p>
 
-<p><h3>2.2 Datos a dercargar</h3></p>
+<p><h3>2.2 Datos a descargar</h3></p>
 <p>Se deben descargar dos imágenes de tipo GRD de Sentinel-1, estas se pueden obtener de forma gratuita en los siguientes enlaces:</p>
 <p>Para ambos casos (Alaska Satellite Facility Vertex y Copernicus Open Access Hub) debe crear -en caso de no tenerse- una cuenta de acceso, para poder descargar datos de información satelital de los repositorios.</p>
 
